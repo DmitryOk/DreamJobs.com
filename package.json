@@ -1,0 +1,23 @@
+{
+  "name": "dreamjobs.com",
+  "version": "1.0.0",
+  "description": "Job finding service .",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DmitryOk/DreamJobs.com.git"
+  },
+  "keywords": [
+    "jobs",
+    "salary"
+  ],
+  "author": "DmitryOk",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/DmitryOk/DreamJobs.com/issues"
+  },
+  "homepage": "https://github.com/DmitryOk/DreamJobs.com#readme"
+}
