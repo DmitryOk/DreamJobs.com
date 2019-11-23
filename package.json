@@ -19,5 +19,20 @@
   "bugs": {
     "url": "https://github.com/DmitryOk/DreamJobs.com/issues"
   },
-  "homepage": "https://github.com/DmitryOk/DreamJobs.com#readme"
+  "homepage": "https://github.com/DmitryOk/DreamJobs.com#readme",
+  "dependencies": {
+    "bson": "^4.0.2",
+    "express": "^4.17.1",
+    "kerberos": "^1.1.3",
+    "mongodb": "^3.3.4",
+    "mongodb-core": "^3.2.7",
+    "node-gyp": "^6.0.1",
+    "react": "^16.12.0",
+    "redux": "^4.0.4"
+  },
+  "devDependencies": {
+    "redux-thunk": "^2.3.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
 }
