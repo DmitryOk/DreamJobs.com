@@ -1,5 +1,8 @@
 node_modules/
-server/build/
+
+build/*
+!.gitkeep
+
 .pdf
 .jpg
 .bmp
