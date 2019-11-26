@@ -12,9 +12,10 @@ const configProd = module.exports = {
     } ,
     plugins : [
         new HtmlPlugin({
-            filename:'index.html',
-            title:'DreamJob'
-        }) ,
+            template:'./src/index.html',
+            filename:'./index.html',
+            hash:true,
+        }) ,   
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
     ] , 

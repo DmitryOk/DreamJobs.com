@@ -12,8 +12,10 @@ const configDev = module.exports = {
     } ,
     plugins : [
         new HtmlPlugin({
-            filename:'index.html',
-            title:'DreamJob'
+            template:'./src/index.html',
+            filename:'./index.html',
+            hash:true,
+            minify:false
         }) ,
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
@@ -29,7 +31,6 @@ const configDev = module.exports = {
                         presets : ['@babel/preset-env','@babel/preset-react'],
                         minified:false,
                         compact:false
-
                     }
                 }
             }
