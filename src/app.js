@@ -1,7 +1,11 @@
 import React from 'react';
-import Redux from 'redux';
+import Header from '../src/components/containers/header';
+import Main from './components/pages/main';
 
- const App = () =>  <div>HELLO</div> ;
+ const App = () => 
+ 
+     <Header/>
+ 
     
 
 export default App;
