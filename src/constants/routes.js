@@ -1,0 +1,12 @@
+export const ABOUT_CONTACTS = '/aboutContacts';
+export const LOGIN_FORM = '/loginForm';
+export const MAIN_PAGE = '/';
+export const MY_PROFILE = '/myProfile';
+export const REGISTER_FORM = '/registrationForm';
+export const RESTORE_PASSWORD = '/restorePassword';
+export const RESUME_INFO = '/resumeInfo';
+export const RESUME_IN_PROFILE = '/resumeInProfile';
+export const RESUME_SEARCH = '/resumeSearch';
+export const VACANCY_INFO = '/vacancyInfo';
+export const VACANCY_IN_PROFILE = '/vacancyInProfile';
+export const VACANCY_SEARCH = '/vacancySearch';
