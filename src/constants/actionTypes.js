@@ -2,6 +2,10 @@
 
 /* client side vacancy actions types*/
 
+//send query onto the server and get daily vacancies
+
+export const GET_DAILY_VACANCIES = "GET_DAILY_VACANCIES";
+
 //should send query onto the server , and render vacancy list 
 export const GET_VACANCIES = "GET_VACANCIES";
 
