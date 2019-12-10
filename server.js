@@ -6,7 +6,7 @@ const webpack  = require('webpack');
 const webpackConfig = require(process.env.WEBPACK_CONFIG ? process.env.WEBPACK_CONFIG : './webpack.config.dev');
 const compiler = webpack(webpackConfig);
 
-/*filer required to mongo connection*/ 
+/*files required to mongo connection*/ 
 const MongoClient = require('mongodb').MongoClient;
 const MONGO_URI_DATA = require('./const/const');
 
@@ -37,10 +37,10 @@ server.use(require('webpack-hot-middleware')(compiler , {
 
 server.use(express.static("build"));
 
-server.get('/build',(request,response) => { 
-    request.injectRoot();   
+server.get('*',(request,response) => {  
     response.sendFile(path.resolve(__dirname,`build/index.html`));
 });
+
 
 server.listen(port,()=> console.log(`Server started at port ${port}`));
 
