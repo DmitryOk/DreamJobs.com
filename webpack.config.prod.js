@@ -1,6 +1,8 @@
 const path = require('path');
 const HtmlPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
+const nodeExternals = require('webpack-node-externals');
+
 
 
 const configProd = module.exports = {
@@ -27,10 +29,16 @@ const configProd = module.exports = {
                 use : {
                     loader :'babel-loader',
                     options : {
-                        presets : ['@babel/preset-env','@babel/preset-react'],
+                        presets : ['@babel/preset-env','@babel/preset-react',            {
+                            plugins: [
+                              '@babel/plugin-proposal-class-properties'
+                            ]
+                          }
+                        ],
                     }
                 }
             }
+  
         ]
     }
 
