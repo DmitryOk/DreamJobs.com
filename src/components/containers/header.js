@@ -1,12 +1,9 @@
 import React from 'react';
-import Navigation from './router';
-import {withRouter} from 'react-router-dom';
-
 
 const Header = () => {
     return (
         <header>
-            <Navigation/>
+            <h1>App header</h1>
         </header>
     );
 }
