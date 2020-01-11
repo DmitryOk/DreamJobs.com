@@ -30,7 +30,7 @@ server.get('/',(request,response) => {
     response.sendFile(path.resolve(__dirname,`build/index.html`));
 });
 
-server.get(`/vc`,(req,res)=>{
+server.get(`/newest`,(req,res)=>{
 
     (async () => {
         
