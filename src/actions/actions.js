@@ -2,6 +2,7 @@
 export const FETCH_VACANCIES_REQUEST = 'FETCH_VACANCIES_REQUEST';
 export const FETCH_VACANCIES_SUCCESS = 'FETCH_VACANCIES_SUCCESS';
 export const FETCH_VACANCIES_REFUSE  = 'FETCH_VACANCIES_REFUSE';
+export const SEARCH_VALUE = 'SEARCH_VALUE';
 
 
 export const fetchVacanciesRequest = url => {
@@ -28,6 +29,18 @@ export const fetchVacanciesRefuse = err =>{
     }
 }
 
+export const searchValue = value =>{
+    return {
+        type : SEARCH_VALUE,
+        value
+    }
+}
+
+export const onSubmit = event = dispatch =>{
+    event.preventDefault();
+    dispatch(searchValue(event.target.value));
+}
+
 const fetchVacancies = url => dispatch => {
     dispatch(fetchVacanciesRequest(url));
     return fetch(url)
@@ -35,6 +48,7 @@ const fetchVacancies = url => dispatch => {
             .then( response => dispatch(fetchVacanciesSuccess(response)))
             .catch(err => dispatch(fetchVacanciesRefuse(err)))
 }
+
 
 export default fetchVacancies;
 

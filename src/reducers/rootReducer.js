@@ -1,9 +1,13 @@
-import {FETCH_VACANCIES_REFUSE,FETCH_VACANCIES_REQUEST,FETCH_VACANCIES_SUCCESS} from '../actions/actions'
+import {FETCH_VACANCIES_REFUSE,FETCH_VACANCIES_REQUEST,FETCH_VACANCIES_SUCCESS , SEARCH_VALUE} from '../actions/actions'
+import { ROOT_PATH } from '../../const/const';
 
+
+const def = `${ROOT_PATH}newest`;
 
 const initialState = {
     isFetching:false,
-    data:[]
+    data:[],
+    value:def
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -27,8 +31,13 @@ const rootReducer = (state = initialState, action) => {
                 ...state,
                 isFetching:false,
             }
+        case SEARCH_VALUE :
+            return {
+                ...state,
+                value:action.value
+            }
 
-         default :
+        default :
             return {
                 ...state
             }   
