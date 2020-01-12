@@ -5,11 +5,10 @@ import SearchForm from '../misc/searchForm';
 import onSubmit from '../../actions/actions';
 
 
-const Main = ( { data, isFetching  , value } = this.props ) => {
-
+const Main = ( {data,isFetching} = this.props ) => {
     return (
         <div>
-            <SearchForm onSubmit = {onSubmit}/>
+            <SearchForm onChange = {onSubmit}/>
             <h2>Hot vacancies!</h2>
             {!isFetching ?
                 <Vacancies posts={data} />
@@ -18,6 +17,6 @@ const Main = ( { data, isFetching  , value } = this.props ) => {
     );
 }
 
-const mapStateToProps = state => ({data:state.data , isFetching:state.isFetching, value:state.value})
+const mapStateToProps = state => ({data:state.root.data , isFetching:state.root.isFetching})
 
 export default connect(mapStateToProps)(Main);

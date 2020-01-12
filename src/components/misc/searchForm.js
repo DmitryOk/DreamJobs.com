@@ -1,15 +1,20 @@
 import React from 'react';
+import {onSubmit} from '../../actions/actions';
+import {connect} from 'react-redux';
 
-const SearchForm = (onSubmit) => {
+
+const SearchForm = ({value} = this.props) => {
 
     return (
         <form>
             <label>
-                <input type = "text"/>
+                <input type = "text" value = {value}  onChange = {onSubmit}/>
                 <input type = 'submit' value= 'Search!'/>
             </label>
         </form>
     )
 }
 
-export default SearchForm;
+const mapStateToProps = state => ({value:state.value})
+
+export default connect(mapStateToProps)(SearchForm);

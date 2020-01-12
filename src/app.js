@@ -9,7 +9,7 @@ class App extends Component {
 
     componentDidMount(){
         const {dispatch} = this.props;
-        this.props.dispatch(fetchVacancies(this.props.value));
+        dispatch(fetchVacancies(this.props.root.value));
     }
 
     render() {

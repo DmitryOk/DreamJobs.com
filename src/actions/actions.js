@@ -37,7 +37,6 @@ export const searchValue = value =>{
 }
 
 export const onSubmit = event = dispatch =>{
-    event.preventDefault();
     dispatch(searchValue(event.target.value));
 }
 
